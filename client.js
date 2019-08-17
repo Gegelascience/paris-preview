@@ -12,9 +12,10 @@ function init(bundle, parent, options = {}) {
 
   // Render your app content to the default cylinder surface
   r360.renderToSurface(
-    r360.createRoot('ParisPreview', { /* initial props */ }),
+    r360.createRoot('ParisPreview', {}),
     r360.getDefaultSurface()
   );
+
 
   // Load the initial environment
   r360.compositor.setBackground('./static_assets/seine.jpg');

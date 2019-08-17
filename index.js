@@ -10,11 +10,16 @@ import {
 } from 'react-360';
 
 export default class ParisPreview extends React.Component {
-
-  state = {
-    counter: 0,
-    place: 'Seine'
+  constructor(props) {
+    super(props)
+    Environment.preloadBackgroundImage(asset('montmartre.jpg'))
+    this.state = {
+      counter: 0,
+      place: 'Seine'
+    }
   }
+
+
 
 
   changeView = () => {
@@ -64,7 +69,7 @@ const styles = StyleSheet.create({
     width: 1000,
     height: 600,
     backgroundColor: 'rgba(255, 255, 255, 0.0)',
-    justifyContent: 'center',
+    flexDirection: 'column-reverse',
     alignItems: 'center',
   },
   greetingBox: {
